@@ -1,0 +1,14 @@
+#randomPic{
+    border-style: double;
+    box-shadow: 5px 5px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+ h1{
+     font-size: 30px;
+     text-align: center;
+     font-family: 'K2D', sans-serif;
+
+ }
