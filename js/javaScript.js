@@ -227,10 +227,9 @@ function convert(){
                 "u": "..-",   "v": "...-",  "w": ".--",  "x": "-..-",
                 "y": "-.--",  "z": "--..", };
 
-    var input = document.getElementById("input");
+    var text = document.getElementById("input").value;
     var output = document.getElementById("output");
 
-        var text = input.value;
         text = text.toLowerCase();
         text = text.split("");
         for (var i = 0; i < text.length; i++) {
@@ -242,3 +241,28 @@ function convert(){
     }//convert
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//functions for process text
+
+function process() {
+    var text = document.getElementById("input").value;
+    var output = document.getElementById("output");
+
+    text.toLowerCase();
+    text = text.replace(/[,;.?!]/g,"");
+    var array = text.split(' ');
+
+    var counter = {};
+
+
+    for(var i=0; i < array.length; i++){
+        if(counter[array[i]]){
+            counter[array[i]] += 1;}
+        else{
+            counter[array[i]] = 1;}}
+
+    for (key in counter){
+        var outputText = (key.toUpperCase() + " " +counter[key] + " ");
+        output.value += outputText;
+    }
+}process
