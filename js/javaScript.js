@@ -211,3 +211,34 @@ function prime(array){
             counter++;}}
     return counter;
 }//prime
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//functions for Morse Code
+
+function convert(){
+
+    var code = {"a": ".-",    "b": "-...",  "c": "-.-.", "d": "-..",
+                "e": ".",     "f": "..-.",  "g": "--.",  "h": "....",
+                "i": "..",    "j": ".---",  "k": "-.-",  "l": ".-..",
+                "m": "--",    "n": "-.",    "o": "---",  "p": ".--.",
+                "q": "--.-",  "r": ".-.",   "s": "...",  "t": "-",
+                "u": "..-",   "v": "...-",  "w": ".--",  "x": "-..-",
+                "y": "-.--",  "z": "--..", };
+
+    var input = document.getElementById("input");
+    var output = document.getElementById("output");
+
+        var text = input.value;
+        text = text.toLowerCase();
+        text = text.split("");
+        for (var i = 0; i < text.length; i++) {
+            text[i] = code[text[i]];
+        }
+        text = text.join(" ");
+        console.log(text);
+        output.innerHTML = text;
+    }//convert
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
