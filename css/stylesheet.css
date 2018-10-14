@@ -6,9 +6,33 @@
     margin-right: auto;
     width: 50%;
 }
- h1{
+h1{
      font-size: 30px;
      text-align: center;
      font-family: 'K2D', sans-serif;
 
  }
+
+
+#mathTable {
+    font-family: 'K2D', sans-serif;
+    border-collapse: collapse;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px black;
+    padding: 0;
+    width: 15%;
+}
+
+#mathTable td, th {
+    border: 1px double #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#mathTable th {height: 50px;}
+
+#mathTable tr:nth-child(even) {
+    background-color: #ededed;}
+
